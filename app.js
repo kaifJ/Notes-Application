@@ -49,7 +49,9 @@ else if(command === 'list'){
 }
 
 else if(command === 'read'){
-
+  var result = notes.read(args.t);
+  console.log(`Title: ${result[0].title}`);
+  console.log(`Body: ${result[0].body}`);
 }
 else{
   console.log('Sorry ! Invalid command');

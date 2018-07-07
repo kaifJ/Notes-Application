@@ -45,9 +45,17 @@ var list = () => {
   return fetchNotes();
 }
 
+var read = (title) => {
+  var notes = fetchNotes();
+  note = {title};
+  var foundNote = notes.filter((note)=>note.title === title);
+  return foundNote;
+}
+
 
 module.exports = {
   add,
   remove,
-  list
+  list,
+  read
 };
